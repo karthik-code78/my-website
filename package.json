@@ -6,6 +6,10 @@
   },
   "dependencies": {
     "@angular/cli": "^13.3.0",
-    "primeng": "^13.3.0"
+    "express": "^4.17.3",
+    "loopback-cli": "^5.2.0",
+    "mongoose": "^6.2.7",
+    "primeng": "^13.3.0",
+    "save": "^2.4.0"
   }
 }

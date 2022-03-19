@@ -38,7 +38,11 @@
           }"
           (click)="onThemeChange()"
         >
-          <a *ngIf="themeLoaderService.theme === 'Dark'">Light</a>
+          <a
+            class="navbar_routes_link_theme"
+            *ngIf="themeLoaderService.theme === 'Dark'"
+            >Light</a
+          >
         </li>
       </ul>
       <form class="d-flex navbar_search_holder">
@@ -97,7 +101,9 @@
           }"
           (click)="onThemeChange()"
         >
-          <a style="color: black;" *ngIf="themeLoaderService.theme === 'Light'"
+          <a
+            class="navbar_light_routes_link_theme"
+            *ngIf="themeLoaderService.theme === 'Light'"
             >Dark</a
           >
         </li>

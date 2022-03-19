@@ -6,6 +6,11 @@
     margin-top: 3px;
     margin-left: 2rem;
     font-size: x-large;
+    &_link {
+      &_theme {
+        color: white;
+      }
+    }
   }
   &_search {
     &_holder {
@@ -34,12 +39,17 @@
       margin-left: 2rem;
       font-size: x-large;
       &_link {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
         color: rgba(78, 76, 76, 0.55);
         text-decoration: none;
         transition: color 500ms ease-in-out;
         &:hover {
           color: rgb(36, 35, 35);
           text-decoration: none;
+        }
+        &_theme {
+          color: black !important;
         }
       }
     }
