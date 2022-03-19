@@ -1,0 +1,22 @@
+.home {
+  &_welcome {
+    &_text {
+      color: white;
+      font-weight: bolder;
+      font-size: 90px;
+      transition: color 1.15s ease-in-out;
+    }
+  }
+}
+
+.home {
+  &_light {
+    &_welcome {
+      &_text {
+        color: black;
+        font-weight: bolder;
+        font-size: 90px;
+      }
+    }
+  }
+}

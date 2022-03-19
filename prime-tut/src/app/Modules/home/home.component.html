@@ -1,0 +1,27 @@
+<!-- <p>home works!</p> -->
+
+<!-- Dark theme -->
+<div class="container-fluid pt-5" *ngIf="themeLoaderService.theme === 'Dark'">
+  <div *ngIf="firstWelcomeText" class="home_welcome_text" @fadeSlideInOut>
+    Hi User, Welcome.
+  </div>
+  <div *ngIf="secondWelcomeText" class="home_welcome_text" @fadeSlideInOut>
+    Feel free to Explore . <br />
+    Thank you.
+  </div>
+</div>
+
+<!-- Light theme -->
+<div class="container-fluid pt-5" *ngIf="themeLoaderService.theme === 'Light'">
+  <div *ngIf="firstWelcomeText" class="home_light_welcome_text" @fadeSlideInOut>
+    Hi User, Welcome.
+  </div>
+  <div
+    *ngIf="secondWelcomeText"
+    class="home_light_welcome_text"
+    @fadeSlideInOut
+  >
+    Feel free to Explore . <br />
+    Thank you.
+  </div>
+</div>

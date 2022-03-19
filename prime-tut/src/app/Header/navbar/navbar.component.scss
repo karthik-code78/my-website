@@ -1,0 +1,52 @@
+.navbar {
+  &_title {
+    font-size: xx-large;
+  }
+  &_routes {
+    margin-top: 3px;
+    margin-left: 2rem;
+    font-size: x-large;
+  }
+  &_search {
+    &_holder {
+      margin-bottom: unset;
+    }
+  }
+}
+
+.navbar {
+  &_light {
+    &_title {
+      color: black;
+      font-size: xx-large;
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: color 1.15s ease-in-out, text-decoration-color 1s ease-in-out;
+      &:hover {
+        color: black;
+        text-decoration: underline;
+        text-decoration-color: black;
+      }
+    }
+    &_routes {
+      // color: black;
+      margin-top: 3px;
+      margin-left: 2rem;
+      font-size: x-large;
+      &_link {
+        color: rgba(78, 76, 76, 0.55);
+        text-decoration: none;
+        transition: color 500ms ease-in-out;
+        &:hover {
+          color: rgb(36, 35, 35);
+          text-decoration: none;
+        }
+      }
+    }
+    &_search {
+      &_holder {
+        margin-bottom: unset;
+      }
+    }
+  }
+}

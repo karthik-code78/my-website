@@ -1,0 +1,121 @@
+<!-- <p>navbar works!</p> -->
+
+<!-- Regular (Dark) theme -->
+<nav
+  class="navbar navbar-expand-lg navbar-dark"
+  *ngIf="themeLoaderService.theme === 'Dark'"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand navbar_title" href="#">Karthik</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto navbar_routes">
+        <li class="nav-item mx-2">
+          <a class="nav-link" routerLink="/Home">Home</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link" routerLink="/About">About</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link" routerLink="/Contact">Contact</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav navbar_routes">
+        <li
+          class="mx-5"
+          [ngStyle]="{
+            color: themeLoaderService.theme === 'Dark' ? 'white' : 'black'
+          }"
+          (click)="onThemeChange()"
+        >
+          <a *ngIf="themeLoaderService.theme === 'Dark'">Light</a>
+        </li>
+      </ul>
+      <form class="d-flex navbar_search_holder">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<p-progressBar
+  *ngIf="themeLoader && themeLoaderService.theme === 'Dark'"
+  mode="indeterminate"
+  [style]="{ height: '6px' }"
+></p-progressBar>
+
+<!-- Light theme -->
+<nav
+  class="navbar navbar-expand-lg navbar-dark"
+  *ngIf="themeLoaderService.theme === 'Light'"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand navbar_light_title" href="#">Karthik</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto navbar_light_routes">
+        <li class="nav-item mx-2">
+          <a class="navbar_light_routes_link" routerLink="/Home">Home</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="navbar_light_routes_link" routerLink="/About">About</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="navbar_light_routes_link" routerLink="/Contact">Contact</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav navbar_light_routes">
+        <li
+          class="mx-5"
+          [ngStyle]="{
+            color: themeLoaderService.theme === 'Light' ? 'black' : 'white'
+          }"
+          (click)="onThemeChange()"
+        >
+          <a style="color: black;" *ngIf="themeLoaderService.theme === 'Light'"
+            >Dark</a
+          >
+        </li>
+      </ul>
+      <form class="d-flex navbar_light_search_holder">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<p-progressBar
+  *ngIf="themeLoader && themeLoaderService.theme === 'Light'"
+  mode="indeterminate"
+  [style]="{ height: '6px' }"
+></p-progressBar>
